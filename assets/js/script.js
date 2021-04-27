@@ -57,8 +57,9 @@ function gotoJournalEntry() {
 
 /* Javascript from online sources to upload journal image 
 
-The following stack overflow site was used for this code: 
+The following stack overflow sites were used for this code: 
 https://stackoverflow.com/questions/12368910/html-display-image-after-selecting-filename
+https://stackoverflow.com/a/55544625 
 
 */ 
 
@@ -71,20 +72,6 @@ function readURL(input) {
     }
 
     reader.readAsDataURL(event.target.files[0]);
-
-    // if (input.files && input.files[0]) {
-    //     var reader = new FileReader();
-
-    //     reader.onload = function (e) {
-    //         $('#journal-image')
-    //             .attr('src', e.target.result)
-    //             .width(400)
-    //             .height(300);
-    //     };
-
-    //     reader.readAsDataURL(input.files[0]);
-    // }
-    
 }
 
 /* Button to go to journal page */
