@@ -1,0 +1,401 @@
+/* Index.html CSS */ 
+
+/* Text */ 
+
+#text, #menu { 
+    display: flex;
+    justify-content: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.welcome{
+    font-family: 'Karla';
+    font-size: 30px;
+}
+
+#write-option{
+    font-family: 'Karla';
+    font-size: 25px;
+}
+
+#gallery-caption { 
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+
+.index #dark-theme-button {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 83%;
+
+    text-align: right;
+
+    font-family: 'Montserrat';
+    font-size: 20px;
+
+    display:block;
+    cursor: pointer;
+
+    background-color: #222222;
+    color: #fff;
+    border: #222222;
+}
+
+.index #light-theme-button {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    text-align: left;
+
+    font-family: 'Montserrat';
+    font-size: 20px;
+
+    display:none;
+    cursor: pointer;
+
+    background-color: #BFBFBF;
+    color: #222222;
+    border: #BFBFBF;
+}
+
+/* Dimensions for gallery */
+
+#gallery,
+.gallery-image {
+  width: 640px;
+  height: 480px;
+}
+
+/* Gallery frame */
+
+#gallery {
+    position: relative;
+    border: 3px solid black;
+    overflow: hidden;
+
+    margin: auto;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+/* Image CSS */
+#gallery-image-row {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 0px;
+    /* Part 2.2: Add transition */
+    transition: 0.5s left;
+  
+}
+  
+.gallery-image img {
+    height: 100%;
+    width: auto;
+}
+  
+/* Controls */
+
+.hidden {
+    visibility: hidden;
+}
+  
+#gallery-controls {			
+    position: absolute;
+    top: 95%;
+    transform: translateY(-50%);
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 1;
+}
+
+#button-next,
+#button-previous {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* Animations */ 
+
+#write-option {
+    overflow: hidden;
+    border-right: 3px solid;
+    white-space: nowrap;
+
+
+    animation: typing 6s steps(22) infinite, blink .5s step-end infinite;
+
+    background-color: rgba(0,0,0,0);
+    border: rgba(0,0,0,0);
+    cursor: pointer;
+    
+}
+
+@keyframes typing { 
+    0% {width:0}
+    30% {width:27ch}
+    100% {width:27ch}
+
+}
+@keyframes blink {
+    50% {border-color: transparent}
+}
+
+body.index {
+    animation: shifting-background 10s infinite alternate; 
+    position: relative;
+    margin: 2% 2% 2% 2%;
+}
+
+@keyframes shifting-background {
+    0% {background-color: #fac785}
+    50% {background-color: #faea85}
+    100% {background-color: #fff29c}
+}
+
+@keyframes shifting-background-dark {
+    0% {background-color: #222222}
+    50% {background-color: #181818}
+    100% {background-color: #333333}
+}
+
+/* dark mode */ 
+
+.dark-mode.index {
+    animation: shifting-background-dark 10s infinite alternate; 
+    position: relative;
+    margin: 2% 2% 2% 2%;
+}
+
+.dark-mode .welcome{
+    font-family: 'Karla';
+    font-size: 30px;
+    color: #BFBFBF;
+}
+
+.dark-mode #write-option{
+    font-family: 'Karla';
+    font-size: 25px;
+    color: #BFBFBF;
+}
+
+.dark-mode #gallery {
+    border: 3px solid #BFBFBF;
+}
+
+.index #go-home-button {
+    display: none;
+}
+
+/* JOURNAL ENTRY CSS */ 
+
+html.journal-html {
+    height: 100%;
+}
+
+body.journal  { 
+    background-color: #bfcfff;
+    position: relative;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+}
+
+.journal #container {
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+}
+
+#writing-area {
+    flex: 3;
+
+    height: 100%;
+
+    margin-left: 3%;
+    margin-right: 3%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+textarea::placeholder {
+    color: white;  
+  }
+
+
+#title-area { 
+    flex: 1;
+
+    border: 0px;
+    resize: none; 
+    outline: none;
+    background-color: #bfcfff;
+
+    font-family: "Karla";
+    font-size: 35px;
+    color: black;
+
+}
+
+#text-area { 
+    flex: 10;
+
+    border: 0px;
+    resize: none; 
+    outline: none;
+    background-color: #bfcfff;
+
+    font-family: "Karla";
+    font-size: 20px;
+    color: black;
+}
+
+#others-area { 
+    background-color: #bfcfff;
+    flex: 2;
+
+    height: 100%;
+    margin-left: 3%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#add-image-caption {
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    font-size:20px;
+    font-family: 'Karla';
+    color: white;
+}
+
+#journal-image { 
+    margin-bottom: 5%;
+}
+
+input[type='file'] {
+    color: transparent;
+}
+
+img {
+    display: none;
+}
+
+img[src] {
+   display: block;
+ }
+
+#go-home-button {
+    z-index: 1;
+    width: 19ch;
+
+    text-align: left;
+
+    font-family: 'Montserrat';
+    font-size: 15px;
+
+    display:block;
+    cursor: pointer;
+
+    background-color: #bfcfff;
+    border: 1px solid #fff;
+    color: #fff;
+
+}
+
+.journal #dark-theme-button {
+    margin-top: 100%;
+
+    z-index: 1;
+    width: 19ch;
+
+    text-align: left;
+
+    font-family: 'Montserrat';
+    font-size: 15px;
+
+    display:block;
+    cursor: pointer;
+
+    background-color: #222222;
+    color: #fff;
+    border: #222222;
+}
+
+.journal #light-theme-button {
+    margin-top: 100%;
+
+    z-index: 1;
+    width: 19ch;
+
+    text-align: left;
+
+    font-family: 'Montserrat';
+    font-size: 15px;
+
+    display:none;
+    cursor: pointer;
+
+    background-color: #fff;
+    color: #222222;
+    border: #fff;
+}
+
+.journal #write-option {
+    display: none;
+}
+
+/* dark mode */ 
+
+.dark-mode.journal {
+    background-color: #222222;
+    position: relative;
+}
+
+.dark-mode.journal #title-area {
+    background-color: #222222;
+    color: #fff;
+}
+
+.dark-mode.journal #text-area {
+    background-color: #222222;
+    color: #fff;
+}
+
+.dark-mode.journal #others-area {
+    background-color: #222222;
+}
+
+.dark-mode.journal #go-home-button {
+    background-color: #222222;
+}
+
