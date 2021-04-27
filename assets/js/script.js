@@ -63,18 +63,28 @@ https://stackoverflow.com/questions/12368910/html-display-image-after-selecting-
 */ 
 
 function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
 
-        reader.onload = function (e) {
-            $('#journal-image')
-                .attr('src', e.target.result)
-                .width(400)
-                .height(300);
-        };
-
-        reader.readAsDataURL(input.files[0]);
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('journal-image');
+        output.src = reader.result;
     }
+
+    reader.readAsDataURL(event.target.files[0]);
+
+    // if (input.files && input.files[0]) {
+    //     var reader = new FileReader();
+
+    //     reader.onload = function (e) {
+    //         $('#journal-image')
+    //             .attr('src', e.target.result)
+    //             .width(400)
+    //             .height(300);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // }
+    
 }
 
 /* Button to go to journal page */

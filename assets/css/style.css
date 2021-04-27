@@ -326,6 +326,10 @@ img[src] {
     display:block;
     cursor: pointer;
 
+    position: absolute;
+    top: 90%;
+    left: 3%;
+
     background-color: #bfcfff;
     border: 1px solid #fff;
     color: #fff;
@@ -333,8 +337,6 @@ img[src] {
 }
 
 .journal #dark-theme-button {
-    margin-top: 100%;
-
     z-index: 1;
     width: 19ch;
 
@@ -345,6 +347,10 @@ img[src] {
 
     display:block;
     cursor: pointer;
+    
+    position: absolute;
+    top: 85%;
+    left: 3%;
 
     background-color: #222222;
     color: #fff;
@@ -352,8 +358,6 @@ img[src] {
 }
 
 .journal #light-theme-button {
-    margin-top: 100%;
-
     z-index: 1;
     width: 19ch;
 
@@ -364,6 +368,10 @@ img[src] {
 
     display:none;
     cursor: pointer;
+
+    position: absolute;
+    top: 85%;
+    left: 3%;
 
     background-color: #fff;
     color: #222222;

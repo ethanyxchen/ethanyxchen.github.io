@@ -35,21 +35,20 @@
                     The following stack overflow site was used for this code: 
                     https://stackoverflow.com/questions/12368910/html-display-image-after-selecting-filename -->
 
-                <input type='file' onchange="readURL(this);" />
+                <input type='file' accept="image/*" onchange="readURL(this);" />
                 <img id="journal-image" alt="your image goes here" />
                 
-                <button id="dark-theme-button">GO TO THE DARK SIDE</button>
-                <button id="light-theme-button">GO TO THE LIGHT SIDE</button>
-                <button id="go-home-button">RETURN TO HOMEPAGE</button>
-
-                <!-- this following button is ignored on this page -->
-                <button id="write-option">click here to start journaling again</button> 
+                
 
             </div>
-
-            
-
         </div>
+
+        <button id="dark-theme-button">GO TO THE DARK SIDE</button>
+        <button id="light-theme-button">GO TO THE LIGHT SIDE</button>
+        <button id="go-home-button">RETURN TO HOMEPAGE</button>
+
+        <!-- this following button is ignored on this page -->
+        <button id="write-option">click here to start journaling again</button> 
 
         <script src="assets/js/script.js"></script>
 
